@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Layout — Mobile-first grid and flexbox layout rules
+   All color values use var(--color-*) custom properties.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Structure
+   -------------------------------------------------------------------------- */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background-color: var(--color-nav-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Section Container
+   -------------------------------------------------------------------------- */
+
+.section__container {
+  max-width: var(--max-width-content);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+  padding-block: var(--space-10);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section (#home)
+   -------------------------------------------------------------------------- */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   About Section (#about)
+   -------------------------------------------------------------------------- */
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.about__bio {
+  flex: 1;
+}
+
+.about__skills {
+  flex: 0 0 280px;
+}
+
+/* --------------------------------------------------------------------------
+   Projects Grid
+   -------------------------------------------------------------------------- */
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Contact Section
+   -------------------------------------------------------------------------- */
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+  text-align: center;
+}
+
+.contact__social {
+  display: flex;
+  gap: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+footer {
+  background-color: var(--color-footer-bg);
+  padding-block: var(--space-6);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (mobile-first, min-width)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet — 768px and up
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .about__content {
+    flex-direction: row;
+    gap: var(--space-10);
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop — 1024px and up
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Wide — 1440px and up
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1440px) {
+  .section__container {
+    padding-inline: var(--space-9);
+  }
+}

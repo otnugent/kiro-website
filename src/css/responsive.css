@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Responsive Overrides
+   All color values use var(--color-*) custom properties — no hardcoded values.
+   Mobile-first: base styles in layout.css; overrides here for breakpoints.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Mobile only (max-width: 767px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  /* Navigation — collapse to hamburger */
+  .nav-toggle {
+    display: flex;
+  }
+
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-nav-bg);
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 99;
+  }
+
+  #nav-menu.open {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-base);
+    padding-block: var(--space-2);
+  }
+
+  /* Hero typography — scale down */
+  #home h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet and up (min-width: 768px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navigation — show full nav, hide hamburger */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Ensure nav is always visible on desktop, overriding any JS-toggled state */
+  #nav-menu {
+    display: flex !important;
+  }
+
+  /* Hero typography — scale up */
+  #home h1 {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero__avatar {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop and up (min-width: 1024px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  #home h1 {
+    font-size: clamp(var(--font-size-4xl), 5vw, 4rem);
+  }
+}

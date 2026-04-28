@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Johnson | Developer</title>
+  <meta name="description" content="Alex Johnson is a software developer specializing in web development, open-source projects, and building clean, accessible user experiences.">
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Alex Johnson | Developer">
+  <meta property="og:description" content="Alex Johnson is a software developer specializing in web development, open-source projects, and building clean, accessible user experiences.">
+  <meta property="og:image" content="images/og-image.webp">
+  <meta property="og:url" content="https://alexjohnson.github.io">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="#home" class="nav-logo">Alex Johnson</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul id="nav-menu" role="list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="home" aria-labelledby="home-heading">
+      <div class="hero__content">
+        <img src="images/placeholder-avatar.svg" alt="Alex Johnson, software developer" width="200" height="200" class="hero__avatar">
+        <h1 id="home-heading">Alex Johnson</h1>
+        <p class="hero__tagline">Software Developer · Open Source Enthusiast · Problem Solver</p>
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section__container">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about__content">
+          <div class="about__bio">
+            <p>Hi, I'm Alex Johnson — a software developer with a passion for building clean, accessible, and performant web experiences. I have 5+ years of experience working across the full stack, with a focus on front-end development and open-source contributions.</p>
+            <p>When I'm not coding, you'll find me hiking, reading about distributed systems, or contributing to community projects.</p>
+          </div>
+          <div class="about__skills">
+            <h3>Skills</h3>
+            <ul class="skills__list">
+              <li>HTML, CSS, JavaScript</li>
+              <li>React, Vue.js</li>
+              <li>Node.js, Python</li>
+              <li>Git, GitHub Actions</li>
+              <li>Accessibility (WCAG 2.1)</li>
+              <li>Performance Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section__container">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="projects__grid">
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="Weather app dashboard showing current conditions and a 5-day forecast"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">WeatherNow</h3>
+              <p class="project-card__description">A responsive weather application that fetches real-time conditions and a 5-day forecast from the OpenWeatherMap API. Features geolocation support and a clean, accessible UI.</p>
+              <div class="project-card__links">
+                <a href="https://alexjohnson.github.io/weather-now" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/alexjohnson/weather-now" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="Task manager app showing a kanban board with draggable task cards"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">TaskFlow</h3>
+              <p class="project-card__description">A kanban-style task manager built with vanilla JavaScript. Supports drag-and-drop reordering, local storage persistence, and keyboard-accessible controls.</p>
+              <div class="project-card__links">
+                <a href="https://alexjohnson.github.io/taskflow" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/alexjohnson/taskflow" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="Portfolio website homepage with a hero section and project gallery"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">Portfolio Site</h3>
+              <p class="project-card__description">This very website — a static personal portfolio built with semantic HTML, CSS custom properties, and vanilla JavaScript. Deployed automatically to GitHub Pages via GitHub Actions.</p>
+              <div class="project-card__links">
+                <a href="https://alexjohnson.github.io" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/alexjohnson/alexjohnson.github.io" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="REST API documentation page showing endpoint listings and example responses"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">BookShelf API</h3>
+              <p class="project-card__description">A RESTful API for managing a personal book collection, built with Node.js and Express. Supports full CRUD operations, JWT authentication, and auto-generated OpenAPI documentation.</p>
+              <div class="project-card__links">
+                <a href="https://bookshelf-api.alexjohnson.dev/docs" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">API Docs</a>
+                <a href="https://github.com/alexjohnson/bookshelf-api" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="Terminal window showing the CLI tool running a file conversion command"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">ConvertKit CLI</h3>
+              <p class="project-card__description">A command-line tool written in Python for batch-converting files between formats (CSV ↔ JSON ↔ YAML). Supports piped input, custom delimiters, and colorized output.</p>
+              <div class="project-card__links">
+                <a href="https://pypi.org/project/convertkit-cli" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">PyPI Package</a>
+                <a href="https://github.com/alexjohnson/convertkit-cli" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/projects/placeholder-project.svg"
+                 alt="Data visualization dashboard displaying interactive charts and graphs for sales data"
+                 width="400" height="225" loading="lazy">
+            <div class="project-card__content">
+              <h3 class="project-card__title">DataViz Dashboard</h3>
+              <p class="project-card__description">An interactive data visualization dashboard built with D3.js. Renders bar charts, line graphs, and pie charts from uploaded CSV files, with responsive SVG scaling and accessible color palettes.</p>
+              <div class="project-card__links">
+                <a href="https://alexjohnson.github.io/dataviz-dashboard" class="btn btn--primary"
+                   target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/alexjohnson/dataviz-dashboard" class="btn btn--secondary"
+                   target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section__container">
+        <h2 id="contact-heading">Get In Touch</h2>
+        <div class="contact__info">
+          <a href="mailto:alex@example.com" class="contact__email">alex@example.com</a>
+          <div class="contact__social">
+            <a href="https://github.com/alexjohnson" target="_blank" rel="noopener noreferrer"
+               aria-label="GitHub profile">GitHub</a>
+            <a href="https://linkedin.com/in/alexjohnson" target="_blank" rel="noopener noreferrer"
+               aria-label="LinkedIn profile">LinkedIn</a>
+          </div>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="current-year"></span> Alex Johnson. All rights reserved.</p>
+  </footer>
+</body>
+</html>

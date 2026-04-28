@@ -1,0 +1,148 @@
+/* ==========================================================================
+   CSS Custom Properties (Design Tokens)
+   All color, typography, spacing, and other design tokens are defined here.
+   No hardcoded hex/rgb/named color values should appear outside this file.
+   ========================================================================== */
+
+/* ==========================================================================
+   WCAG 2.1 AA Color Contrast Audit — Fixes Applied
+   --------------------------------------------------------------------------
+   Combinations audited (foreground on background → ratio):
+   1. #f1f5f9 on #0f172a → 16.30:1  ✓ PASS  (primary text on main bg)
+   2. #94a3b8 on #0f172a →  6.96:1  ✓ PASS  (muted text on main bg)
+   3. #94a3b8 on #1e293b →  5.71:1  ✓ PASS  (muted text on alt bg)
+   4. #6366f1 on #0f172a →  4.00:1  ✗ FAIL  → fixed: #818cf8 → 5.98:1
+   5. #6366f1 on #1e293b →  3.27:1  ✗ FAIL  → fixed: #818cf8 → 4.90:1
+   6. #f1f5f9 on #6366f1 →  4.08:1  ✗ FAIL  → fixed: btn uses --color-bg text
+                                               #0f172a on #818cf8 → 5.98:1
+   7. #ef4444 on #0f172a →  4.74:1  ✓ PASS  (error text on main bg)
+   8. #22c55e on #0f172a →  7.83:1  ✓ PASS  (success text on main bg)
+
+   Changes made:
+   - --color-primary: #6366f1 → #818cf8 (indigo-400, fixes items 4 & 5)
+   - --color-primary-hover: #4f46e5 → #6366f1 (one step darker for hover)
+   - --color-primary-btn-text: added new token (#0f172a) for button text on
+     primary background (fixes item 6; dark text on light-indigo bg = 5.98:1)
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     Color Palette — Professional Dark Theme
+     -------------------------------------------------------------------------- */
+
+  /* Page backgrounds */
+  --color-bg:          #0f172a; /* Main page background (dark navy) */
+  --color-bg-alt:      #1e293b; /* Alternate section background */
+
+  /* Surface & borders */
+  --color-surface:     #1e293b; /* Card / form surface */
+  --color-border:      #334155; /* Border color */
+
+  /* Text */
+  --color-text:        #f1f5f9; /* Primary text */
+  --color-text-muted:  #94a3b8; /* Secondary / muted text */
+
+  /* Primary accent (indigo) — upgraded to indigo-400 for WCAG AA compliance */
+  /* #818cf8 on #0f172a = 5.98:1 ✓  |  #818cf8 on #1e293b = 4.90:1 ✓        */
+  --color-primary:          #818cf8; /* indigo-400 (was #6366f1 indigo-500)   */
+  --color-primary-hover:    #6366f1; /* indigo-500 (was #4f46e5 indigo-600)   */
+  --color-primary-btn-text: #0f172a; /* dark text on primary btn bg = 5.98:1  */
+
+  /* Secondary (slate) */
+  --color-secondary:       #334155;
+  --color-secondary-hover: #475569;
+
+  /* Feedback */
+  --color-success: #22c55e;
+  --color-error:   #ef4444;
+
+  /* Navigation */
+  --color-nav-bg:   #0f172a;
+  --color-nav-text: #f1f5f9;
+
+  /* Footer */
+  --color-footer-bg: #0f172a;
+
+  /* --------------------------------------------------------------------------
+     Typography Scale
+     -------------------------------------------------------------------------- */
+
+  /* Font families */
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Font sizes */
+  --font-size-xs:   0.75rem;   /*  12px */
+  --font-size-sm:   0.875rem;  /*  14px */
+  --font-size-base: 1rem;      /*  16px */
+  --font-size-lg:   1.125rem;  /*  18px */
+  --font-size-xl:   1.25rem;   /*  20px */
+  --font-size-2xl:  1.5rem;    /*  24px */
+  --font-size-3xl:  1.875rem;  /*  30px */
+  --font-size-4xl:  2.25rem;   /*  36px */
+  --font-size-5xl:  3rem;      /*  48px */
+
+  /* Font weights */
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* Line heights */
+  --line-height-tight:   1.25;
+  --line-height-base:    1.6;
+  --line-height-relaxed: 1.75;
+
+  /* --------------------------------------------------------------------------
+     Spacing Scale (4px base unit)
+     -------------------------------------------------------------------------- */
+
+  --space-1:  0.25rem;  /*   4px */
+  --space-2:  0.5rem;   /*   8px */
+  --space-3:  0.75rem;  /*  12px */
+  --space-4:  1rem;     /*  16px */
+  --space-5:  1.25rem;  /*  20px */
+  --space-6:  1.5rem;   /*  24px */
+  --space-7:  2rem;     /*  32px */
+  --space-8:  2.5rem;   /*  40px */
+  --space-9:  3rem;     /*  48px */
+  --space-10: 4rem;     /*  64px */
+  --space-11: 5rem;     /*  80px */
+  --space-12: 6rem;     /*  96px */
+  --space-13: 8rem;     /* 128px */
+  --space-14: 10rem;    /* 160px */
+  --space-15: 12rem;    /* 192px */
+  --space-16: 16rem;    /* 256px */
+
+  /* --------------------------------------------------------------------------
+     Border Radius
+     -------------------------------------------------------------------------- */
+
+  --radius-sm:   0.25rem;  /*  4px */
+  --radius-md:   0.5rem;   /*  8px */
+  --radius-lg:   0.75rem;  /* 12px */
+  --radius-xl:   1rem;     /* 16px */
+  --radius-full: 9999px;   /* Pill / circle */
+
+  /* --------------------------------------------------------------------------
+     Box Shadows (elevated for dark backgrounds)
+     -------------------------------------------------------------------------- */
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+
+  /* --------------------------------------------------------------------------
+     Transitions
+     -------------------------------------------------------------------------- */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* --------------------------------------------------------------------------
+     Layout
+     -------------------------------------------------------------------------- */
+
+  --max-width-content: 1200px;
+  --nav-height:        4rem; /* 64px */
+}

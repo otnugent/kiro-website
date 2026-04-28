@@ -1,0 +1,117 @@
+/* ==========================================================================
+   CSS Reset / Normalize
+   A minimal but thorough reset to ensure consistent rendering across browsers.
+   ========================================================================== */
+
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Document root */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Body base styles using CSS custom properties */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Media elements — block display and constrained width */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements inherit font from parent */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prevent text overflow in text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles for lists with role="list" (e.g. nav menus) */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Links inherit color and remove underline by default */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove default button styles */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Isolation for common SPA root elements */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility — Focus styles
+   -------------------------------------------------------------------------- */
+
+/* Visible focus ring using the primary accent color */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Remove outline for pointer/touch interactions that don't need it */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion — Respect user preference
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
