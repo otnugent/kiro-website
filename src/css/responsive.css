@@ -86,3 +86,19 @@
     font-size: clamp(var(--font-size-4xl), 5vw, 4rem);
   }
 }
+
+/* --------------------------------------------------------------------------
+   Blog layout — stack on mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .blog__layout {
+    flex-direction: column;
+  }
+
+  .blog__calendar-col {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+}

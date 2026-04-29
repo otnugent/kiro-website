@@ -29,6 +29,7 @@
       <ul id="nav-menu" role="list">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -38,7 +39,7 @@
   <main id="main-content">
     <section id="home" aria-labelledby="home-heading">
       <div class="hero__content">
-        <img src="images/placeholder-avatar.svg" alt="Owen Nugent, software engineer" width="200" height="200" class="hero__avatar">
+        <img src="images/profile.png" alt="Owen Nugent, software engineer" width="200" height="200" class="hero__avatar">
         <h1 id="home-heading">Owen Nugent</h1>
         <p class="hero__tagline">Software Engineer · Full-Stack & Cloud Specialist · 10+ Years Delivering Scalable Apps</p>
         <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -73,6 +74,79 @@
         </div>
       </div>
     </section>
+    <section id="blog" aria-labelledby="blog-heading">
+      <div class="section__container">
+        <h2 id="blog-heading">Blog</h2>
+        <p class="blog__subtitle">A chronological journey of my posts</p>
+
+        <div class="blog__layout">
+
+          <!-- ── Left: Timeline ── -->
+          <div class="blog__timeline-col">
+            <ol class="timeline" id="timeline-list" reversed>
+
+              <!-- PLACEHOLDER entry — replace with a real post -->
+              <li class="timeline__entry" data-date="2026-04-28">
+                <time class="timeline__date" datetime="2026-04-28">April 28, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">[Post Title]</h3>
+                  <p class="timeline__excerpt">This is a placeholder blog entry. Replace this text with a summary of what you did or learned. Add a link below when you have a full post to share.</p>
+                  <!-- <a href="/posts/your-post.html" class="timeline__link">Read more →</a> -->
+                </div>
+              </li>
+
+              <!-- PLACEHOLDER entry — replace with a real post -->
+              <li class="timeline__entry" data-date="2026-04-21">
+                <time class="timeline__date" datetime="2026-04-21">April 21, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">[Post Title]</h3>
+                  <p class="timeline__excerpt">Another placeholder entry. Add as many entries as you like — newest at the top.</p>
+                  <!-- <a href="/posts/your-post.html" class="timeline__link">Read more →</a> -->
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
+          <!-- ── Right: Calendar widget ── -->
+          <aside class="blog__calendar-col" aria-label="Blog calendar">
+
+            <div class="cal">
+              <!-- Calendar header -->
+              <div class="cal__header">
+                <button class="cal__nav" id="cal-prev" aria-label="Previous month">&#8249;</button>
+                <span class="cal__month-label" id="cal-month-label"></span>
+                <button class="cal__nav" id="cal-next" aria-label="Next month">&#8250;</button>
+              </div>
+
+              <!-- Day-of-week labels -->
+              <div class="cal__grid cal__grid--header" aria-hidden="true">
+                <span>Su</span><span>Mo</span><span>Tu</span>
+                <span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+              </div>
+
+              <!-- Day cells — filled by JS -->
+              <div class="cal__grid cal__grid--days" id="cal-days" role="grid" aria-label="Calendar days"></div>
+            </div>
+
+            <!-- Posts for selected day -->
+            <div class="cal__posts" id="cal-posts" hidden>
+              <p class="cal__posts-label" id="cal-posts-label"></p>
+              <ul class="cal__posts-list" id="cal-posts-list"></ul>
+            </div>
+
+            <!-- Quick jump -->
+            <div class="cal__quickjump">
+              <p class="cal__quickjump-label">Quick Jump</p>
+              <button class="cal__jump-btn" id="jump-week">→ This week</button>
+              <button class="cal__jump-btn" id="jump-month">→ This month</button>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" aria-labelledby="projects-heading">
       <div class="section__container">
         <h2 id="projects-heading">Projects</h2>
@@ -197,6 +271,7 @@
         </div>
       </div>
     </section>
+
     <section id="contact" aria-labelledby="contact-heading">
       <div class="section__container">
         <h2 id="contact-heading">Get In Touch</h2>
