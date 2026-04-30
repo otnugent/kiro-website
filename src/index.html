@@ -14,7 +14,7 @@
 
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js" type="module"></script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -30,7 +30,6 @@
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#blog" class="nav-link">Blog</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
@@ -76,8 +75,7 @@
     </section>
     <section id="blog" aria-labelledby="blog-heading">
       <div class="section__container">
-        <h2 id="blog-heading">Blog</h2>
-        <p class="blog__subtitle">A chronological journey of my posts</p>
+        <h2 id="blog-heading">What I've Been Doing</h2>
 
         <div class="blog__layout">
 
@@ -85,23 +83,64 @@
           <div class="blog__timeline-col">
             <ol class="timeline" id="timeline-list" reversed>
 
-              <!-- PLACEHOLDER entry — replace with a real post -->
-              <li class="timeline__entry" data-date="2026-04-28">
-                <time class="timeline__date" datetime="2026-04-28">April 28, 2026</time>
+              <li class="timeline__entry" data-date="2026-04-30">
+                <time class="timeline__date" datetime="2026-04-30">April 30, 2026</time>
                 <div class="timeline__body">
-                  <h3 class="timeline__title">[Post Title]</h3>
-                  <p class="timeline__excerpt">This is a placeholder blog entry. Replace this text with a summary of what you did or learned. Add a link below when you have a full post to share.</p>
-                  <!-- <a href="/posts/your-post.html" class="timeline__link">Read more →</a> -->
+                  <h3 class="timeline__title">GitHub Copilot Dev Days - D.C.</h3>
+                  <p class="timeline__excerpt">Community-led developer event focused on AI-assisted coding with GitHub Copilot. This event brings together developers to explore practical workflows, real-world use cases, and hands-on experiences using GitHub Copilot.</p>
                 </div>
               </li>
 
-              <!-- PLACEHOLDER entry — replace with a real post -->
-              <li class="timeline__entry" data-date="2026-04-21">
-                <time class="timeline__date" datetime="2026-04-21">April 21, 2026</time>
+              <li class="timeline__entry" data-date="2026-04-28">
+                <time class="timeline__date" datetime="2026-04-28">April 28, 2026</time>
                 <div class="timeline__body">
-                  <h3 class="timeline__title">[Post Title]</h3>
-                  <p class="timeline__excerpt">Another placeholder entry. Add as many entries as you like — newest at the top.</p>
-                  <!-- <a href="/posts/your-post.html" class="timeline__link">Read more →</a> -->
+                  <h3 class="timeline__title">This Website Goes Live</h3>
+                  <p class="timeline__excerpt">First pushed this portfolio site to GitHub Pages. Built with semantic HTML, CSS custom properties, and vanilla JavaScript — no frameworks, no build step.</p>
+                </div>
+              </li>
+
+              <li class="timeline__entry" data-date="2026-04-22">
+                <time class="timeline__date" datetime="2026-04-22">April 22, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">Hands-On: Natural Language to Structured Specs in AI Dev</h3>
+                  <p class="timeline__excerpt">I learned about the Kiro product for 'spec-driven' agentic AI development.</p>
+                  <a href="https://www.meetup.com/ai-innovators-network-tysons-meetup-dc-nova-md/events/313911900/" class="timeline__link" target="_blank" rel="noopener noreferrer">View event →</a>
+                </div>
+              </li>
+
+              <li class="timeline__entry" data-date="2026-04-15">
+                <time class="timeline__date" datetime="2026-04-15">April 15, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">Vibe Coding &amp; OpenClaw</h3>
+                  <p class="timeline__excerpt">I got some perspective on how some people ran local models and OpenClaw in their personal environments.</p>
+                  <a href="https://www.meetup.com/bitcoin-district/events/313929352/" class="timeline__link" target="_blank" rel="noopener noreferrer">View event →</a>
+                </div>
+              </li>
+
+              <li class="timeline__entry" data-date="2026-04-09">
+                <time class="timeline__date" datetime="2026-04-09">April 9, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">AI Your Way: MCPs vs Skills vs SubAgents</h3>
+                  <p class="timeline__excerpt">I learned about the Kendo UI tool and the environment in which it is used – agentic AI development.</p>
+                  <a href="https://www.meetup.com/caparea-net/events/313644696/" class="timeline__link" target="_blank" rel="noopener noreferrer">View event →</a>
+                </div>
+              </li>
+
+              <li class="timeline__entry" data-date="2026-04-06">
+                <time class="timeline__date" datetime="2026-04-06">April 6, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">Future of Data and AI: Agentic AI Conference</h3>
+                  <p class="timeline__excerpt">Online event that talked about enterprise policies for agentic AI.</p>
+                  <a href="https://www.meetup.com/data-science-dojo-washington-dc/events/313731645/" class="timeline__link" target="_blank" rel="noopener noreferrer">View event →</a>
+                </div>
+              </li>
+
+              <li class="timeline__entry" data-date="2026-03-04">
+                <time class="timeline__date" datetime="2026-03-04">March 4, 2026</time>
+                <div class="timeline__body">
+                  <h3 class="timeline__title">Performant Reactive Web Apps</h3>
+                  <p class="timeline__excerpt">I gave a short presentation on one consideration of performance in modern reactive web apps. I presented on the browser rendering of reactive JavaScript frameworks, particularly Angular.</p>
+                  <a href="assets/presentations/performant-reactive-web-apps.pptx" class="timeline__link" download>Download slides (PowerPoint) ↓</a>
                 </div>
               </li>
 
@@ -139,7 +178,7 @@
             <div class="cal__quickjump">
               <p class="cal__quickjump-label">Quick Jump</p>
               <button class="cal__jump-btn" id="jump-week">→ This week</button>
-              <button class="cal__jump-btn" id="jump-month">→ This month</button>
+              <button class="cal__jump-btn" id="jump-start">→ Start</button>
             </div>
 
           </aside>
@@ -147,7 +186,7 @@
       </div>
     </section>
 
-    <section id="projects" aria-labelledby="projects-heading">
+    <section id="projects" aria-labelledby="projects-heading" hidden>
       <div class="section__container">
         <h2 id="projects-heading">Projects</h2>
         <div class="projects__grid">

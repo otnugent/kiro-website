@@ -13,7 +13,7 @@ export function initBlogCalendar() {
   const prevBtn    = document.getElementById('cal-prev');
   const nextBtn    = document.getElementById('cal-next');
   const jumpWeek   = document.getElementById('jump-week');
-  const jumpMonth  = document.getElementById('jump-month');
+  const jumpStart  = document.getElementById('jump-start');
 
   if (!calDays) return; // blog section not present
 
@@ -160,15 +160,20 @@ export function initBlogCalendar() {
     if (nearest) nearest.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
-  jumpMonth.addEventListener('click', () => {
-    viewYear  = today.getFullYear();
-    viewMonth = today.getMonth();
+  jumpStart.addEventListener('click', () => {
+    // Find the earliest entry by date
+    const sorted = [...entries].sort((a, b) =>
+      new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'))
+    );
+    if (!sorted.length) return;
+    const earliest = sorted[0];
+    const earliestDate = new Date(earliest.getAttribute('data-date'));
+    viewYear  = earliestDate.getFullYear();
+    viewMonth = earliestDate.getMonth();
+    selectedDate = null;
+    calPosts.hidden = true;
     render();
-    const nearest = entries.find(e => {
-      const d = new Date(e.getAttribute('data-date'));
-      return d.getMonth() === today.getMonth() && d.getFullYear() === today.getFullYear();
-    });
-    if (nearest) nearest.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    earliest.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
   // ── Initial render ────────────────────────────────────────────────────────

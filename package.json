@@ -4,12 +4,14 @@
   "description": "Personal portfolio website — test suite",
   "type": "module",
   "scripts": {
+    "start": "serve src",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "devDependencies": {
-    "vitest": "^2.1.8",
+    "fast-check": "^3.22.0",
     "jsdom": "^25.0.1",
-    "fast-check": "^3.22.0"
+    "serve": "^14.2.6",
+    "vitest": "^2.1.8"
   }
 }
