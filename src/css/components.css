@@ -433,6 +433,12 @@ section h2 {
   margin-bottom: var(--space-3);
 }
 
+.timeline__location {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
 .timeline__link {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
